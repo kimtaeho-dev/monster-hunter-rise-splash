@@ -1,0 +1,74 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: move-to-top-over 0.5s;
+  animation-delay: 4s;
+}
+
+.intro-text {
+  position: absolute;
+  content: url('./assets/capcom-present.png');
+  height: 10%;
+  opacity: 0;
+  animation: fade-in-and-out 2s;
+}
+
+.logo {
+  content: url('./assets//logo.png');
+  height: 23%;
+  opacity: 0;
+  animation: fade-in 2.5s;
+  animation-delay: 2s;
+}
+
+.service-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Animation Key Frames */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-and-out {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-to-top-over {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
